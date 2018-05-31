@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Hot Weather Widget3</h1>\n<div class=\"element\">\n  <div *ngIf=\"hotelList | async as hotelList; else loadGif \">\n    <app-main-panel [hotelList]=\"hotelList\" (selectHotel)=\"selectHotel($event)\"></app-main-panel>\n  </div>\n  <div class=\"element-right\">\n    <app-weather-panel [selectedHotel]=\"selectedHotel\"></app-weather-panel>\n    <app-social-info-panel [selectedHotel]=\"selectedHotel\"></app-social-info-panel>\n  </div>\n  <ng-template #loadGif>\n    ...loading\n  </ng-template>\n</div>"
+module.exports = "<h1>Hot Weather Widget</h1>\n<div class=\"element\">\n  <div *ngIf=\"hotelList | async as hotelList; else loadGif \">\n    <app-main-panel [hotelList]=\"hotelList\" (selectHotel)=\"selectHotel($event)\"></app-main-panel>\n  </div>\n  <div class=\"element-right\">\n    <app-weather-panel [selectedHotel]=\"selectedHotel\"></app-weather-panel>\n    <app-social-info-panel [selectedHotel]=\"selectedHotel\"></app-social-info-panel>\n  </div>\n  <ng-template #loadGif>\n    ...loading\n  </ng-template>\n</div>"
 
 /***/ }),
 
@@ -71,7 +71,6 @@ var AppComponent = /** @class */ (function () {
         this.hotelList = _hotels__WEBPACK_IMPORTED_MODULE_1__["hotelList$"];
     }
     AppComponent.prototype.selectHotel = function (hotel) {
-        console.log('selectedHotel' + hotel);
         this.selectedHotel = hotel;
     };
     AppComponent = __decorate([
@@ -240,7 +239,7 @@ __webpack_require__.r(__webpack_exports__);
 var data = [
     {
         img: 'assets/images/hotel1/1_big.jpg',
-        small_img: ['../../assets/images/hotel1/1_small.jpg', '../../assets/images/hotel1/2_small.jpg'],
+        small_img: ['assets/images/hotel1/1_small.jpg', 'assets/images/hotel1/2_small.jpg'],
         address: 'Adress 1',
         phone: 123456784675,
         weather: {
@@ -251,15 +250,15 @@ var data = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel1/2_big.jpg',
+            img: 'assets/images/hotel1/2_big.jpg',
             followers: 1896,
             following: 1300,
         },
         type: 'Hotel'
     },
     {
-        img: '../../assets/images/hotel2/1_big.jpg',
-        small_img: ['../../assets/images/hotel2/1_small.jpg', '../../assets/images/hotel2/2_small.jpg'],
+        img: 'assets/images/hotel2/1_big.jpg',
+        small_img: ['assets/images/hotel2/1_small.jpg', 'assets/images/hotel2/2_small.jpg'],
         address: 'Adress 1',
         phone: 567893570567,
         weather: {
@@ -270,15 +269,15 @@ var data = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel2/2_big.jpg',
+            img: 'assets/images/hotel2/2_big.jpg',
             followers: 2230,
             following: 400,
         },
         type: 'Tours'
     },
     {
-        img: '../../assets/images/hotel3/1_big.jpg',
-        small_img: ['../../assets/images/hotel3/1_small.jpg', '../../assets/images/hotel3/2_small.jpg'],
+        img: 'assets/images/hotel3/1_big.jpg',
+        small_img: ['assets/images/hotel3/1_small.jpg', 'assets/images/hotel3/2_small.jpg'],
         address: 'Adress 1',
         phone: 6547890345,
         weather: {
@@ -289,15 +288,15 @@ var data = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel3/2_big.jpg',
+            img: 'assets/images/hotel3/2_big.jpg',
             followers: 4564,
             following: 2363,
         },
         type: 'Hotel'
     },
     {
-        img: '../../assets/images/hotel4/1_big.jpg',
-        small_img: ['../../assets/images/hotel4/1_small.jpg', '../../assets/images/hotel4/2_small.jpg'],
+        img: 'assets/images/hotel4/1_big.jpg',
+        small_img: ['assets/images/hotel4/1_small.jpg', 'assets/images/hotel4/2_small.jpg'],
         address: 'Adress 1',
         phone: 1234123456,
         weather: {
@@ -308,15 +307,15 @@ var data = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel4/2_big.jpg',
+            img: 'assets/images/hotel4/2_big.jpg',
             followers: 4567,
             following: 4243,
         },
         type: 'Fishing'
     },
     {
-        img: '../../assets/images/hotel5/1_big.jpg',
-        small_img: ['../../assets/images/hotel5/1_small.jpg', '../../assets/images/hotel5/2_small.jpg'],
+        img: 'assets/images/hotel5/1_big.jpg',
+        small_img: ['assets/images/hotel5/1_small.jpg', 'assets/images/hotel5/2_small.jpg'],
         address: 'Adress 1',
         phone: 9090099900,
         weather: {
@@ -327,15 +326,15 @@ var data = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel5/2_big.jpg',
+            img: 'assets/images/hotel5/2_big.jpg',
             followers: 5679,
             following: 999,
         },
         type: 'Hotel'
     },
     {
-        img: '../../assets/images/hotel6/1_big.jpg',
-        small_img: ['../../assets/images/hotel6/1_small.jpg', '../../assets/images/hotel6/2_small.jpg'],
+        img: 'assets/images/hotel6/1_big.jpg',
+        small_img: ['assets/images/hotel6/1_small.jpg', 'assets/images/hotel6/2_small.jpg'],
         address: 'Adress 1',
         phone: 1441546785,
         weather: {
@@ -346,15 +345,15 @@ var data = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel6/2_big.jpg',
+            img: 'assets/images/hotel6/2_big.jpg',
             followers: 345,
             following: 2345,
         },
         type: 'Tours'
     },
     {
-        img: '../../assets/images/hotel7/1_big.jpg',
-        small_img: ['../../assets/images/hotel7/1_small.jpg', '../../assets/images/hotel7/2_small.jpg'],
+        img: 'assets/images/hotel7/1_big.jpg',
+        small_img: ['assets/images/hotel7/1_small.jpg', 'assets/images/hotel7/2_small.jpg'],
         address: 'Adress 1',
         phone: 5674123456,
         weather: {
@@ -365,15 +364,15 @@ var data = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel7/2_big.jpg',
+            img: 'assets/images/hotel7/2_big.jpg',
             followers: 345,
             following: 2345,
         },
         type: 'Hotel'
     },
     {
-        img: '../../assets/images/hotel8/1_big.jpg',
-        small_img: ['../../assets/images/hotel8/1_small.jpg', '../../assets/images/hotel8/2_small.jpg'],
+        img: 'assets/images/hotel8/1_big.jpg',
+        small_img: ['assets/images/hotel8/1_small.jpg', 'assets/images/hotel8/2_small.jpg'],
         address: 'Adress 1',
         phone: 4000000001,
         weather: {
@@ -384,15 +383,15 @@ var data = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel8/2_big.jpg',
+            img: 'assets/images/hotel8/2_big.jpg',
             followers: 3425,
             following: 6777,
         },
         type: 'Weather'
     },
     {
-        img: '../../assets/images/hotel9/1_big.jpg',
-        small_img: ['../../assets/images/hotel9/1_small.jpg', '../../assets/images/hotel9/2_small.jpg'],
+        img: 'assets/images/hotel9/1_big.jpg',
+        small_img: ['assets/images/hotel9/1_small.jpg', 'assets/images/hotel9/2_small.jpg'],
         address: 'Adress 1',
         phone: 2020990898,
         weather: {
@@ -403,15 +402,15 @@ var data = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel9/2_big.jpg',
+            img: 'assets/images/hotel9/2_big.jpg',
             followers: 6790,
             following: 100,
         },
         type: 'Tour'
     },
     {
-        img: '../../assets/images/hotel10/1_big.jpg',
-        small_img: ['../../assets/images/hotel10/1_small.jpg', '../../assets/images/hotel10/2_small.jpg'],
+        img: 'assets/images/hotel10/1_big.jpg',
+        small_img: ['assets/images/hotel10/1_small.jpg', 'assets/images/hotel10/2_small.jpg'],
         address: 'Adress 1',
         phone: 40005600001,
         weather: {
@@ -422,7 +421,7 @@ var data = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel10/2_big.jpg',
+            img: 'assets/images/hotel10/2_big.jpg',
             followers: 876,
             following: 1,
         },
@@ -489,19 +488,15 @@ var MainPanelComponent = /** @class */ (function () {
         this.selectHotel.emit(hotel);
     };
     MainPanelComponent.prototype.ngOnInit = function () {
-        console.log(this.hotelList);
         this.searchTerm = 'Hotel';
         this.selectedHotel = this.hotelList[0];
         this.selectHotel.emit(this.selectedHotel);
     };
     MainPanelComponent.prototype.setSearchTerm = function (term) {
-        console.log(term);
         this.searchTerm = term;
-        console.log('setSearchTerm');
     };
     MainPanelComponent.prototype.updateSelectedHotel = function () {
         var _this = this;
-        console.log('updateSelectedHotel');
         this.selectedHotel = this.hotelList.find(function (element) {
             return element.type.toLocaleLowerCase() === _this.searchTerm.toLocaleLowerCase();
         });
