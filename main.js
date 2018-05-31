@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Hot Weather Widget</h1>\n<div class=\"element\">\n  <div *ngIf=\"hotelList | async as hotelList; else loadGif \">\n    <app-main-panel [hotelList]=\"hotelList\" (selectHotel)=\"selectHotel($event)\"></app-main-panel>\n  </div>\n  <div class=\"element-right\">\n    <app-weather-panel [selectedHotel]=\"selectedHotel\"></app-weather-panel>\n    <app-social-info-panel [selectedHotel]=\"selectedHotel\"></app-social-info-panel>\n  </div>\n  <ng-template #loadGif>\n    ...loading\n  </ng-template>\n</div>"
+module.exports = "<h1>Hot Weather Widget1</h1>\n<div class=\"element\">\n  <div *ngIf=\"hotelList | async as hotelList; else loadGif \">\n    <app-main-panel [hotelList]=\"hotelList\" (selectHotel)=\"selectHotel($event)\"></app-main-panel>\n  </div>\n  <div class=\"element-right\">\n    <app-weather-panel [selectedHotel]=\"selectedHotel\"></app-weather-panel>\n    <app-social-info-panel [selectedHotel]=\"selectedHotel\"></app-social-info-panel>\n  </div>\n  <ng-template #loadGif>\n    ...loading\n  </ng-template>\n</div>"
 
 /***/ }),
 
