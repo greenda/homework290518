@@ -239,7 +239,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var data = [
     {
-        img: '../assets/images/hotel1/1_big.jpg',
+        img: 'homework290518/assets/images/hotel1/1_big.jpg',
         small_img: ['../../assets/images/hotel1/1_small.jpg', '../../assets/images/hotel1/2_small.jpg'],
         address: 'Adress 1',
         phone: 123456784675,
