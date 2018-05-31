@@ -13,7 +13,6 @@ export class AppComponent {
   public selectedHotel: Hotel;
 
   public selectHotel(hotel: Hotel) {
-    console.log('selectedHotel' + hotel);
     this.selectedHotel = hotel;
   }
 

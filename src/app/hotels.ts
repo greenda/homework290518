@@ -23,8 +23,8 @@ export interface Hotel {
 
 const data: Hotel[] = [
     {
-        img: '../../assets/images/hotel1/1_big.jpg',
-        small_img: ['../../assets/images/hotel1/1_small.jpg', '../../assets/images/hotel1/2_small.jpg'],
+        img: 'assets/images/hotel1/1_big.jpg',
+        small_img: ['assets/images/hotel1/1_small.jpg', 'assets/images/hotel1/2_small.jpg'],
         address: 'Adress 1',
         phone: 123456784675,
         weather: {
@@ -35,15 +35,15 @@ const data: Hotel[] = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel1/2_big.jpg',
+            img: 'assets/images/hotel1/2_big.jpg',
             followers: 1896,
             following: 1300,
         },
         type: 'Hotel'
     },
     {
-        img: '../../assets/images/hotel2/1_big.jpg',
-        small_img: ['../../assets/images/hotel2/1_small.jpg', '../../assets/images/hotel2/2_small.jpg'],
+        img: 'assets/images/hotel2/1_big.jpg',
+        small_img: ['assets/images/hotel2/1_small.jpg', 'assets/images/hotel2/2_small.jpg'],
         address: 'Adress 1',
         phone: 567893570567,
         weather: {
@@ -54,15 +54,15 @@ const data: Hotel[] = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel2/2_big.jpg',
+            img: 'assets/images/hotel2/2_big.jpg',
             followers: 2230,
             following: 400,
         },
         type: 'Tours'
     },
     {
-        img: '../../assets/images/hotel3/1_big.jpg',
-        small_img: ['../../assets/images/hotel3/1_small.jpg', '../../assets/images/hotel3/2_small.jpg'],
+        img: 'assets/images/hotel3/1_big.jpg',
+        small_img: ['assets/images/hotel3/1_small.jpg', 'assets/images/hotel3/2_small.jpg'],
         address: 'Adress 1',
         phone: 6547890345,
         weather: {
@@ -73,15 +73,15 @@ const data: Hotel[] = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel3/2_big.jpg',
+            img: 'assets/images/hotel3/2_big.jpg',
             followers: 4564,
             following: 2363,
         },
         type: 'Hotel'
     },
     {
-        img: '../../assets/images/hotel4/1_big.jpg',
-        small_img: ['../../assets/images/hotel4/1_small.jpg', '../../assets/images/hotel4/2_small.jpg'],
+        img: 'assets/images/hotel4/1_big.jpg',
+        small_img: ['assets/images/hotel4/1_small.jpg', 'assets/images/hotel4/2_small.jpg'],
         address: 'Adress 1',
         phone: 1234123456,
         weather: {
@@ -92,15 +92,15 @@ const data: Hotel[] = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel4/2_big.jpg',
+            img: 'assets/images/hotel4/2_big.jpg',
             followers: 4567,
             following: 4243,
         },
         type: 'Fishing'
     },
     {
-        img: '../../assets/images/hotel5/1_big.jpg',
-        small_img: ['../../assets/images/hotel5/1_small.jpg', '../../assets/images/hotel5/2_small.jpg'],
+        img: 'assets/images/hotel5/1_big.jpg',
+        small_img: ['assets/images/hotel5/1_small.jpg', 'assets/images/hotel5/2_small.jpg'],
         address: 'Adress 1',
         phone: 9090099900,
         weather: {
@@ -111,15 +111,15 @@ const data: Hotel[] = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel5/2_big.jpg',
+            img: 'assets/images/hotel5/2_big.jpg',
             followers: 5679,
             following: 999  ,
         },
         type: 'Hotel'
     },
     {
-        img: '../../assets/images/hotel6/1_big.jpg',
-        small_img: ['../../assets/images/hotel6/1_small.jpg', '../../assets/images/hotel6/2_small.jpg'],
+        img: 'assets/images/hotel6/1_big.jpg',
+        small_img: ['assets/images/hotel6/1_small.jpg', 'assets/images/hotel6/2_small.jpg'],
         address: 'Adress 1',
         phone: 1441546785,
         weather: {
@@ -130,15 +130,15 @@ const data: Hotel[] = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel6/2_big.jpg',
+            img: 'assets/images/hotel6/2_big.jpg',
             followers: 345,
             following: 2345,
         },
         type: 'Tours'
     },
     {
-        img: '../../assets/images/hotel7/1_big.jpg',
-        small_img: ['../../assets/images/hotel7/1_small.jpg', '../../assets/images/hotel7/2_small.jpg'],
+        img: 'assets/images/hotel7/1_big.jpg',
+        small_img: ['assets/images/hotel7/1_small.jpg', 'assets/images/hotel7/2_small.jpg'],
         address: 'Adress 1',
         phone: 5674123456,
         weather: {
@@ -149,15 +149,15 @@ const data: Hotel[] = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel7/2_big.jpg',
+            img: 'assets/images/hotel7/2_big.jpg',
             followers: 345,
             following: 2345,
         },
         type: 'Hotel'
     },
     {
-        img: '../../assets/images/hotel8/1_big.jpg',
-        small_img: ['../../assets/images/hotel8/1_small.jpg', '../../assets/images/hotel8/2_small.jpg'],
+        img: 'assets/images/hotel8/1_big.jpg',
+        small_img: ['assets/images/hotel8/1_small.jpg', 'assets/images/hotel8/2_small.jpg'],
         address: 'Adress 1',
         phone: 4000000001,
         weather: {
@@ -168,15 +168,15 @@ const data: Hotel[] = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel8/2_big.jpg',
+            img: 'assets/images/hotel8/2_big.jpg',
             followers: 3425,
             following: 6777,
         },
         type: 'Weather'
     },
     {
-        img: '../../assets/images/hotel9/1_big.jpg',
-        small_img: ['../../assets/images/hotel9/1_small.jpg', '../../assets/images/hotel9/2_small.jpg'],
+        img: 'assets/images/hotel9/1_big.jpg',
+        small_img: ['assets/images/hotel9/1_small.jpg', 'assets/images/hotel9/2_small.jpg'],
         address: 'Adress 1',
         phone: 2020990898,
         weather: {
@@ -187,15 +187,15 @@ const data: Hotel[] = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel9/2_big.jpg',
+            img: 'assets/images/hotel9/2_big.jpg',
             followers: 6790,
             following: 100,
         },
         type: 'Tour'
     },
     {
-        img: '../../assets/images/hotel10/1_big.jpg',
-        small_img: ['../../assets/images/hotel10/1_small.jpg', '../../assets/images/hotel10/2_small.jpg'],
+        img: 'assets/images/hotel10/1_big.jpg',
+        small_img: ['assets/images/hotel10/1_small.jpg', 'assets/images/hotel10/2_small.jpg'],
         address: 'Adress 1',
         phone: 40005600001,
         weather: {
@@ -206,7 +206,7 @@ const data: Hotel[] = [
         },
         social_info: {
             title: 'Title1',
-            img: '../../assets/images/hotel10/2_big.jpg',
+            img: 'assets/images/hotel10/2_big.jpg',
             followers: 876,
             following: 1,
         },

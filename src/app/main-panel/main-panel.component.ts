@@ -23,20 +23,16 @@ export class MainPanelComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.hotelList);
     this.searchTerm = 'Hotel';
     this.selectedHotel = this.hotelList[0];
     this.selectHotel.emit(this.selectedHotel);
   }
 
   public setSearchTerm(term: string): void {
-    console.log(term);
     this.searchTerm = term;
-    console.log('setSearchTerm');
   }
 
   public updateSelectedHotel() {
-    console.log('updateSelectedHotel');
     this.selectedHotel = this.hotelList.find((element: Hotel) =>
       element.type.toLocaleLowerCase() === this.searchTerm.toLocaleLowerCase());
   }
