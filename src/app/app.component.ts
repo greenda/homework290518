@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Hotel, hotelList$ } from './hotels';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  public hotelList: Observable<Hotel[]> = hotelList$;
+  public selectedHotel: Hotel;
+
+  public selectHotel(hotel: Hotel) {
+    console.log('selectedHotel' + hotel);
+    this.selectedHotel = hotel;
+  }
+
 }
