@@ -1,0 +1,16 @@
+<div class="activity-row" (click)="onSelectHotel(hotel)" [ngClass]="{selected_activity_box: (hotel === selectedHotel)}">
+  <div class="activity-desc">
+    <h5>Resort Address</h5>
+    <p>Sed perspiciatis</p>
+    <p>Et harum quidem</p>
+    <h6>{{hotel.phone | phoneNumber:hotel.phone}}</h6>
+  </div>
+  <div class="activity-img">
+    <ul>
+      <li *ngFor="let hotelImg of hotel.small_img">
+        <img [src]='hotelImg' alt="" />
+      </li>
+    </ul>
+  </div>
+  <div class="clear"> </div>
+</div>

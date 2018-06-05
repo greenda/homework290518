@@ -7,6 +7,7 @@ import { WeatherPanelComponent } from './weather-panel/weather-panel.component';
 import { SocialInfoPanelComponent } from './social-info-panel/social-info-panel.component';
 import { HotelFilterPipe } from './common/pipe/hotel-filter.pipe';
 import { PhoneNumberPipe } from './common/pipe/phone-number.pipe';
+import { HotelCardComponent } from './main-panel/hotel-card/hotel-card.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PhoneNumberPipe } from './common/pipe/phone-number.pipe';
     WeatherPanelComponent,
     SocialInfoPanelComponent,
     HotelFilterPipe,
-    PhoneNumberPipe
+    PhoneNumberPipe,
+    HotelCardComponent
   ],
   imports: [
     BrowserModule
