@@ -191,7 +191,7 @@ const data: Hotel[] = [
             followers: 6790,
             following: 100,
         },
-        type: 'Tour'
+        type: 'Tours'
     },
     {
         img: 'assets/images/hotel10/1_big.jpg',
