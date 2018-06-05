@@ -105,12 +105,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _social_info_panel_social_info_panel_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./social-info-panel/social-info-panel.component */ "./src/app/social-info-panel/social-info-panel.component.ts");
 /* harmony import */ var _common_pipe_hotel_filter_pipe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./common/pipe/hotel-filter.pipe */ "./src/app/common/pipe/hotel-filter.pipe.ts");
 /* harmony import */ var _common_pipe_phone_number_pipe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./common/pipe/phone-number.pipe */ "./src/app/common/pipe/phone-number.pipe.ts");
+/* harmony import */ var _main_panel_hotel_card_hotel_card_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./main-panel/hotel-card/hotel-card.component */ "./src/app/main-panel/hotel-card/hotel-card.component.ts");
+/* harmony import */ var _main_panel_pipe_menu_items_pipe__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./main-panel/pipe/menu-items.pipe */ "./src/app/main-panel/pipe/menu-items.pipe.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -130,7 +134,9 @@ var AppModule = /** @class */ (function () {
                 _weather_panel_weather_panel_component__WEBPACK_IMPORTED_MODULE_4__["WeatherPanelComponent"],
                 _social_info_panel_social_info_panel_component__WEBPACK_IMPORTED_MODULE_5__["SocialInfoPanelComponent"],
                 _common_pipe_hotel_filter_pipe__WEBPACK_IMPORTED_MODULE_6__["HotelFilterPipe"],
-                _common_pipe_phone_number_pipe__WEBPACK_IMPORTED_MODULE_7__["PhoneNumberPipe"]
+                _common_pipe_phone_number_pipe__WEBPACK_IMPORTED_MODULE_7__["PhoneNumberPipe"],
+                _main_panel_hotel_card_hotel_card_component__WEBPACK_IMPORTED_MODULE_8__["HotelCardComponent"],
+                _main_panel_pipe_menu_items_pipe__WEBPACK_IMPORTED_MODULE_9__["MenuItemsPipe"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]
@@ -254,7 +260,7 @@ var data = [
             followers: 1896,
             following: 1300,
         },
-        type: 'Hotel'
+        type: 'IHotel'
     },
     {
         img: 'assets/images/hotel2/1_big.jpg',
@@ -292,7 +298,7 @@ var data = [
             followers: 4564,
             following: 2363,
         },
-        type: 'Hotel'
+        type: 'IHotel'
     },
     {
         img: 'assets/images/hotel4/1_big.jpg',
@@ -330,7 +336,7 @@ var data = [
             followers: 5679,
             following: 999,
         },
-        type: 'Hotel'
+        type: 'IHotel'
     },
     {
         img: 'assets/images/hotel6/1_big.jpg',
@@ -368,7 +374,7 @@ var data = [
             followers: 345,
             following: 2345,
         },
-        type: 'Hotel'
+        type: 'IHotel'
     },
     {
         img: 'assets/images/hotel8/1_big.jpg',
@@ -406,7 +412,7 @@ var data = [
             followers: 6790,
             following: 100,
         },
-        type: 'Tour'
+        type: 'Tours'
     },
     {
         img: 'assets/images/hotel10/1_big.jpg',
@@ -436,6 +442,74 @@ var hotelList$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["of"])(data);
 
 /***/ }),
 
+/***/ "./src/app/main-panel/hotel-card/hotel-card.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/main-panel/hotel-card/hotel-card.component.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/main-panel/hotel-card/hotel-card.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/main-panel/hotel-card/hotel-card.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"activity-row\" (click)=\"onSelectHotel(hotel)\" [ngClass]=\"{selected_activity_box: (hotel === selectedHotel)}\">\n  <div class=\"activity-desc\">\n    <h5>Resort Address</h5>\n    <p>Sed perspiciatis</p>\n    <p>Et harum quidem</p>\n    <h6>{{hotel.phone | phoneNumber:hotel.phone}}</h6>\n  </div>\n  <div class=\"activity-img\">\n    <ul>\n      <li *ngFor=\"let hotelImg of hotel.small_img\">\n        <img [src]='hotelImg'/>\n      </li>\n    </ul>\n  </div>\n  <div class=\"clear\"> </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/main-panel/hotel-card/hotel-card.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/main-panel/hotel-card/hotel-card.component.ts ***!
+  \***************************************************************/
+/*! exports provided: HotelCardComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HotelCardComponent", function() { return HotelCardComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HotelCardComponent = /** @class */ (function () {
+    function HotelCardComponent() {
+    }
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], HotelCardComponent.prototype, "hotel", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], HotelCardComponent.prototype, "selectedHotel", void 0);
+    HotelCardComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-hotel-card',
+            template: __webpack_require__(/*! ./hotel-card.component.html */ "./src/app/main-panel/hotel-card/hotel-card.component.html"),
+            styles: [__webpack_require__(/*! ./hotel-card.component.css */ "./src/app/main-panel/hotel-card/hotel-card.component.css")]
+        })
+    ], HotelCardComponent);
+    return HotelCardComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/main-panel/main-panel.component.css":
 /*!*****************************************************!*\
   !*** ./src/app/main-panel/main-panel.component.css ***!
@@ -454,7 +528,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"element-left\">\n  <div class=\"element-bg-img\">\n    <img [src]=\"selectedHotel.img\" alt=\"\" class=\"img-responsive\"> </div>\n\n  <div class=\"element-left-bottom\">\n    <div class=\"ele-strip\">\n      <ul>\n        <li>\n          <a href=\"#\" (click)=\"setSearchTerm('Hotel')\" (click)=\"updateSelectedHotel()\" (click)=\"onSelectHotel(selectedHotel)\">Hotel</a>\n        </li>\n        <li>\n          <a href=\"#\" (click)=\"setSearchTerm('Fishing')\" (click)=\"updateSelectedHotel()\" (click)=\"onSelectHotel(selectedHotel)\">Fishing</a>\n        </li>\n        <li>\n          <a href=\"#\" (click)=\"setSearchTerm('Tours')\" (click)=\"updateSelectedHotel()\" (click)=\"onSelectHotel(selectedHotel)\">Tours</a>\n        </li>\n        <li class=\"anc-bor\">\n          <a href=\"#\" (click)=\"setSearchTerm('Weather')\" (click)=\"updateSelectedHotel()\" (click)=\"onSelectHotel(selectedHotel)\">Weather</a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"village\">\n      <h3>Righteous indignation & like</h3>\n      <span class=\"line\"> </span>\n      <div class=\"activity_box\">\n        <div class=\"scrollbar\" id=\"style-2\">\n          <div class=\"activity-row\" *ngFor=\"let hotel of hotelList | hotelFilter:searchTerm\" (click)=\"onSelectHotel(hotel)\" [ngClass]=\"{selected_activity_box: (hotel === selectedHotel)}\">\n            <div class=\"activity-desc\">\n              <h5>Resort Address</h5>\n              <p>Sed perspiciatis</p>\n              <p>Et harum quidem</p>\n              <h6>{{hotel.phone | phoneNumber:hotel.phone}}</h6>\n            </div>\n            <div class=\"activity-img\">\n              <ul>\n                <li *ngFor=\"let hotelImg of hotel.small_img\">\n                  <img [src]='hotelImg' alt=\"\" />\n                </li>\n              </ul>\n            </div>\n            <div class=\"clear\"> </div>\n          </div>\n        </div>\n      </div>\n    </div>"
+module.exports = "<div class=\"element-left\">\n  <div class=\"element-bg-img\">\n    <img [src]=\"selectedHotel.img\" alt=\"\" class=\"img-responsive\"> </div>\n    <div class=\"element-left-bottom\">\n      <div class=\"ele-strip\">\n        <ul>\n          <li *ngFor=\"let menuItem of hotelList | menuItems; let last = last\">\n            <a href=\"#\" (click)=\"setSearchTerm(menuItem)\" (click)=\"updateSelectedHotel()\" >{{menuItem}}</a>\n          </li>\n        </ul>\n      </div>\n    </div>\n    <div class=\"village\">\n      <h3>Righteous indignation & like</h3>\n      <span class=\"line\"> </span>\n      <div class=\"activity_box\">\n        <div class=\"scrollbar\" id=\"style-2\">          \n          <app-hotel-card *ngFor=\"let hotel of hotelList | hotelFilter:searchTerm\" \n          (click)=\"onSelectHotel(hotel)\" [hotel]=hotel [selectedHotel]=selectedHotel></app-hotel-card>\n        </div>\n      </div>\n    </div>"
 
 /***/ }),
 
@@ -487,11 +561,6 @@ var MainPanelComponent = /** @class */ (function () {
         this.selectedHotel = hotel;
         this.selectHotel.emit(hotel);
     };
-    MainPanelComponent.prototype.ngOnInit = function () {
-        this.searchTerm = 'Hotel';
-        this.selectedHotel = this.hotelList[0];
-        this.selectHotel.emit(this.selectedHotel);
-    };
     MainPanelComponent.prototype.setSearchTerm = function (term) {
         this.searchTerm = term;
     };
@@ -500,6 +569,12 @@ var MainPanelComponent = /** @class */ (function () {
         this.selectedHotel = this.hotelList.find(function (element) {
             return element.type.toLocaleLowerCase() === _this.searchTerm.toLocaleLowerCase();
         });
+        this.onSelectHotel(this.selectedHotel);
+    };
+    MainPanelComponent.prototype.ngOnInit = function () {
+        this.selectedHotel = this.hotelList[0];
+        this.searchTerm = this.selectedHotel.type;
+        this.selectHotel.emit(this.selectedHotel);
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -514,10 +589,48 @@ var MainPanelComponent = /** @class */ (function () {
             selector: 'app-main-panel',
             template: __webpack_require__(/*! ./main-panel.component.html */ "./src/app/main-panel/main-panel.component.html"),
             styles: [__webpack_require__(/*! ./main-panel.component.css */ "./src/app/main-panel/main-panel.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
+        })
     ], MainPanelComponent);
     return MainPanelComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/main-panel/pipe/menu-items.pipe.ts":
+/*!****************************************************!*\
+  !*** ./src/app/main-panel/pipe/menu-items.pipe.ts ***!
+  \****************************************************/
+/*! exports provided: MenuItemsPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuItemsPipe", function() { return MenuItemsPipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var MenuItemsPipe = /** @class */ (function () {
+    function MenuItemsPipe() {
+    }
+    MenuItemsPipe.prototype.transform = function (hotels) {
+        return Array.from(hotels.reduce(function (menuItems, hotel) {
+            menuItems.add(hotel.type);
+            return menuItems;
+        }, new Set()));
+    };
+    MenuItemsPipe = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
+            name: 'menuItems'
+        })
+    ], MenuItemsPipe);
+    return MenuItemsPipe;
 }());
 
 
@@ -570,8 +683,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var SocialInfoPanelComponent = /** @class */ (function () {
     function SocialInfoPanelComponent() {
     }
-    SocialInfoPanelComponent.prototype.ngOnInit = function () {
-    };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
@@ -581,8 +692,7 @@ var SocialInfoPanelComponent = /** @class */ (function () {
             selector: 'app-social-info-panel',
             template: __webpack_require__(/*! ./social-info-panel.component.html */ "./src/app/social-info-panel/social-info-panel.component.html"),
             styles: [__webpack_require__(/*! ./social-info-panel.component.css */ "./src/app/social-info-panel/social-info-panel.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
+        })
     ], SocialInfoPanelComponent);
     return SocialInfoPanelComponent;
 }());
@@ -637,8 +747,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var WeatherPanelComponent = /** @class */ (function () {
     function WeatherPanelComponent() {
     }
-    WeatherPanelComponent.prototype.ngOnInit = function () {
-    };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
@@ -648,8 +756,7 @@ var WeatherPanelComponent = /** @class */ (function () {
             selector: 'app-weather-panel',
             template: __webpack_require__(/*! ./weather-panel.component.html */ "./src/app/weather-panel/weather-panel.component.html"),
             styles: [__webpack_require__(/*! ./weather-panel.component.css */ "./src/app/weather-panel/weather-panel.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
+        })
     ], WeatherPanelComponent);
     return WeatherPanelComponent;
 }());
