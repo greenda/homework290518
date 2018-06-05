@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IHotel } from '../../hotels';
+import { IHotel } from '../services/hotels-service.service';
 
 @Pipe({
   name: 'hotelFilter'

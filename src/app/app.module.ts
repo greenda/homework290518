@@ -9,6 +9,7 @@ import { HotelFilterPipe } from './common/pipe/hotel-filter.pipe';
 import { PhoneNumberPipe } from './common/pipe/phone-number.pipe';
 import { HotelCardComponent } from './main-panel/hotel-card/hotel-card.component';
 import { MenuItemsPipe } from './main-panel/pipe/menu-items.pipe';
+import { HotelsService } from './common/services/hotels-service.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { MenuItemsPipe } from './main-panel/pipe/menu-items.pipe';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    {provide: HotelsService, useClass: HotelsService},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

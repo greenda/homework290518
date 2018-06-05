@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IHotel } from '../../hotels';
+import { IHotel } from '../../common/services/hotels-service.service';
 
 @Pipe({
   name: 'menuItems'

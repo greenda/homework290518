@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { IHotel, hotelList$ } from '../hotels';
+import { IHotel} from '../common/services/hotels-service.service';
 import { Observable, Observer, of } from 'rxjs';
 
 @Component({
