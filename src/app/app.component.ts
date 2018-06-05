@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Hotel, hotelList$ } from './hotels';
+import { IHotel, hotelList$ } from './hotels';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,10 +9,10 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   title = 'app';
-  public hotelList: Observable<Hotel[]> = hotelList$;
-  public selectedHotel: Hotel;
+  public hotelList: Observable<IHotel[]> = hotelList$;
+  public selectedHotel: IHotel;
 
-  public selectHotel(hotel: Hotel) {
+  public selectHotel(hotel: IHotel) {
     this.selectedHotel = hotel;
   }
 

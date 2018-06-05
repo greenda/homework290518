@@ -4,7 +4,7 @@
     <div class="element-left-bottom">
       <div class="ele-strip">
         <ul>
-          <li *ngFor="let menuItem of hotelList | menuItems">
+          <li *ngFor="let menuItem of hotelList | menuItems; let last = last">
             <a href="#" (click)="setSearchTerm(menuItem)" (click)="updateSelectedHotel()" >{{menuItem}}</a>
           </li>
         </ul>

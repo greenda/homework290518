@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Hotel, hotelList$ } from '../hotels';
+import { IHotel, hotelList$ } from '../hotels';
 import { Observable, Observer, of } from 'rxjs';
 
 @Component({
@@ -9,13 +9,13 @@ import { Observable, Observer, of } from 'rxjs';
 })
 export class MainPanelComponent implements OnInit {
 
-  public selectedHotel: Hotel;
+  public selectedHotel: IHotel;
   public searchTerm: string;
 
-  @Input() hotelList: Hotel[];
-  @Output() selectHotel: EventEmitter<Hotel> = new EventEmitter();
+  @Input() hotelList: IHotel[];
+  @Output() selectHotel: EventEmitter<IHotel> = new EventEmitter();
 
-  public onSelectHotel(hotel: Hotel): void {
+  public onSelectHotel(hotel: IHotel): void {
     this.selectedHotel = hotel;
     this.selectHotel.emit(hotel);
   }
@@ -25,7 +25,7 @@ export class MainPanelComponent implements OnInit {
   }
 
   public updateSelectedHotel() {
-    this.selectedHotel = this.hotelList.find((element: Hotel) =>
+    this.selectedHotel = this.hotelList.find((element: IHotel) =>
       element.type.toLocaleLowerCase() === this.searchTerm.toLocaleLowerCase());
     this.onSelectHotel(this.selectedHotel);
   }
@@ -35,5 +35,4 @@ export class MainPanelComponent implements OnInit {
     this.searchTerm = this.selectedHotel.type;
     this.selectHotel.emit(this.selectedHotel);
   }
-
 }

@@ -1,17 +1,16 @@
 import { Observable, Observer, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
-export interface Hotel {
-    img: string;
-    small_img: string[];
-    address: string;
-    phone: number;   // дополнительно задание pipe для форматирования
+export interface IWeather {
     weather: {
         title: string;
         icon: string;
         water: number;
         temperature: number;
     };
+}
+
+export interface ISocialInfo {
     social_info: {
         title: string;
         img: string;
@@ -21,7 +20,16 @@ export interface Hotel {
     type: string;
 }
 
-const data: Hotel[] = [
+export interface IHotel extends IWeather, ISocialInfo {
+    img: string;
+    small_img: string[];
+    address: string;
+    phone: number;   // дополнительно задание pipe для форматирования
+
+
+}
+
+const data: IHotel[] = [
     {
         img: 'assets/images/hotel1/1_big.jpg',
         small_img: ['assets/images/hotel1/1_small.jpg', 'assets/images/hotel1/2_small.jpg'],
@@ -39,7 +47,7 @@ const data: Hotel[] = [
             followers: 1896,
             following: 1300,
         },
-        type: 'Hotel'
+        type: 'IHotel'
     },
     {
         img: 'assets/images/hotel2/1_big.jpg',
@@ -77,7 +85,7 @@ const data: Hotel[] = [
             followers: 4564,
             following: 2363,
         },
-        type: 'Hotel'
+        type: 'IHotel'
     },
     {
         img: 'assets/images/hotel4/1_big.jpg',
@@ -115,7 +123,7 @@ const data: Hotel[] = [
             followers: 5679,
             following: 999  ,
         },
-        type: 'Hotel'
+        type: 'IHotel'
     },
     {
         img: 'assets/images/hotel6/1_big.jpg',
@@ -153,7 +161,7 @@ const data: Hotel[] = [
             followers: 345,
             following: 2345,
         },
-        type: 'Hotel'
+        type: 'IHotel'
     },
     {
         img: 'assets/images/hotel8/1_big.jpg',
@@ -214,7 +222,7 @@ const data: Hotel[] = [
     }
 ];
 
-export const hotelList$: Observable<Hotel[]> = of(data);
+export const hotelList$: Observable<IHotel[]> = of(data);
 //   .pipe(
 //     delay(3000)
 //   );
